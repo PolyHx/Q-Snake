@@ -4,8 +4,10 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import Logo from './img/cyborg-25.png';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const { t } = useTranslation();
   return (
     <Container fluid className="wrapper">
       <Row className="justify-content-center align-items-center">
@@ -37,7 +39,7 @@ function App() {
           >
             <Card.Body>
               <Card.Title>
-                <b>What is this?</b>
+                <b>{t('whatIsThis')}</b>
               </Card.Title>
               <Card.Text>
                 • An interactive web visualiser for a Q-learning RL agent that

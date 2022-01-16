@@ -7,7 +7,7 @@ function argMax(array) {
   return array.map((x, i) => [x, i]).reduce((r, a) => (a[0] > r[0] ? a : r))[1];
 }
 
-const dir_c = ['L', 'U', 'R', 'D'];
+const dir_c = ['←', '↑', '→', '↓'];
 
 // 4 - impossible states
 const best_moves = [
