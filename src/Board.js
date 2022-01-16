@@ -217,7 +217,7 @@ class Board extends Component {
       while (!done) {
         dist = manhattanDist(
           this.state.food,
-          this.state.dots[this.state.dots.length - 1]
+          this.state.dots[this.state.dots.length - 1],
         );
 
         // step
@@ -244,7 +244,7 @@ class Board extends Component {
         else if (
           manhattanDist(
             this.state.food,
-            this.state.dots[this.state.dots.length - 1]
+            this.state.dots[this.state.dots.length - 1],
           ) < dist
         )
           reward = 1;
@@ -348,7 +348,7 @@ class Board extends Component {
       () => {
         console.log(this.state);
         this.qlearning();
-      }
+      },
     );
     event.preventDefault();
   };
@@ -357,7 +357,7 @@ class Board extends Component {
     var done,
       mxs = 0;
     var next_surr, next_dir, next_v1;
-    var surr, dir, v1, action, dist, steps;
+    let surr, dir, v1, action, steps;
     while (this.state.agent_state === 1) {
       done = false;
       [surr, dir] = this.getState();
@@ -365,10 +365,10 @@ class Board extends Component {
       steps = 0;
 
       while (!done) {
-        dist = manhattanDist(
-          this.state.food,
-          this.state.dots[this.state.dots.length - 1]
-        );
+        // dist = manhattanDist(
+        //   this.state.food,
+        //   this.state.dots[this.state.dots.length - 1]
+        // );
 
         // step
         action = this.action(0, dir, v1);
@@ -414,10 +414,10 @@ class Board extends Component {
     return (
       <>
         <Row
-          className='justify-content-center align-content-center'
+          className="justify-content-center align-content-center"
           style={{ 'margin-top': '30px' }}
         >
-          <Col md='auto' lg='auto' sm='auto' xs='auto'>
+          <Col md="auto" lg="auto" sm="auto" xs="auto">
             <Card style={{ 'min-width': '200px' }}>
               <Card.Body>
                 <Card.Title>
@@ -429,11 +429,11 @@ class Board extends Component {
                       <Form.Group style={{ 'min-width': '255px' }}>
                         <Form.Label>Start Epsilon:</Form.Label>
                         <Form.Control
-                          name='start_epsilon'
-                          type='number'
-                          min='0'
-                          max='1'
-                          step='0.01'
+                          name="start_epsilon"
+                          type="number"
+                          min="0"
+                          max="1"
+                          step="0.01"
                           required
                         />
                       </Form.Group>
@@ -442,11 +442,11 @@ class Board extends Component {
                       <Form.Group style={{ 'min-width': '255px' }}>
                         <Form.Label>Discount Factor:</Form.Label>
                         <Form.Control
-                          name='discount_factor'
-                          type='number'
-                          min='0'
-                          max='1'
-                          step='0.01'
+                          name="discount_factor"
+                          type="number"
+                          min="0"
+                          max="1"
+                          step="0.01"
                           required
                         />
                       </Form.Group>
@@ -456,11 +456,11 @@ class Board extends Component {
                       <Form.Group style={{ 'min-width': '255px' }}>
                         <Form.Label>End Epsilon:</Form.Label>
                         <Form.Control
-                          name='end_epsilon'
-                          type='number'
-                          min='0'
-                          max='1'
-                          step='0.01'
+                          name="end_epsilon"
+                          type="number"
+                          min="0"
+                          max="1"
+                          step="0.01"
                           required
                         />
                       </Form.Group>
@@ -469,10 +469,10 @@ class Board extends Component {
                       <Form.Group style={{ 'min-width': '255px' }}>
                         <Form.Label>Episodes:</Form.Label>
                         <Form.Control
-                          name='episodes'
-                          type='number'
-                          min='10'
-                          max='5000'
+                          name="episodes"
+                          type="number"
+                          min="10"
+                          max="5000"
                           required
                         />
                       </Form.Group>
@@ -482,7 +482,7 @@ class Board extends Component {
                         <div
                           style={{ display: 'flex', justifyContent: 'center' }}
                         >
-                          <Button type='submit' variant='primary'>
+                          <Button type="submit" variant="primary">
                             Train
                           </Button>
                         </div>
@@ -492,8 +492,8 @@ class Board extends Component {
                           style={{ display: 'flex', justifyContent: 'center' }}
                         >
                           <Button
-                            type='button'
-                            variant='primary'
+                            type="button"
+                            variant="primary"
                             onClick={() => {
                               this.setState({ ...this.state, agent_state: 2 });
                             }}
@@ -507,7 +507,7 @@ class Board extends Component {
                           style={{ display: 'flex', justifyContent: 'center' }}
                         >
                           <Button
-                            variant='primary'
+                            variant="primary"
                             onClick={this.setTestAgentState}
                           >
                             Test
@@ -516,7 +516,7 @@ class Board extends Component {
                       </Form.Group>
                     </Form.Row>
                   </Form>
-                  <Row className='justify-content-center'>
+                  <Row className="justify-content-center">
                     <small>{'Note: Train button resets Q-table'}</small>
                   </Row>
                 </Card.Text>
@@ -524,8 +524,8 @@ class Board extends Component {
             </Card>
           </Col>
 
-          <Col md='auto' lg='auto' sm='auto' xs='auto'>
-            <Card className='bg-light' style={{ 'min-width': '288px' }}>
+          <Col md="auto" lg="auto" sm="auto" xs="auto">
+            <Card className="bg-light" style={{ 'min-width': '288px' }}>
               <Card.Body>
                 <Card.Title>
                   <b>Speed Control:</b>
@@ -535,10 +535,10 @@ class Board extends Component {
                     <Form.Group style={{ 'text-align': 'center' }}>
                       <Form.Label>Delay between moves: </Form.Label>
                       <Form.Control
-                        type='range'
-                        min='10'
-                        max='200'
-                        step='5'
+                        type="range"
+                        min="10"
+                        max="200"
+                        step="5"
                         onChange={(e) => this.changeSpeed(e)}
                       />
                     </Form.Group>
@@ -548,7 +548,7 @@ class Board extends Component {
                   <b>Current Run:</b>
                 </Card.Title>
                 <Card.Text>
-                  <Row className='justify-content-center'>
+                  <Row className="justify-content-center">
                     <Col
                       style={{
                         'margin-left': '20px',
@@ -594,28 +594,28 @@ class Board extends Component {
           </Col>
         </Row>
 
-        <Row className='justify-content-center'>
-          <Col md='auto' lg='auto' sm='auto' xs='auto'>
-            <div className='board-area'>
+        <Row className="justify-content-center">
+          <Col md="auto" lg="auto" sm="auto" xs="auto">
+            <div className="board-area">
               <SnakeDot snakeDots={this.state.dots} />
               <Food food={this.state.food} />
             </div>
           </Col>
-          <Col md='auto' lg='auto' sm='auto' xs='auto'>
+          <Col md="auto" lg="auto" sm="auto" xs="auto">
             <State curState={this.getState()} />
           </Col>
         </Row>
-        <Row className='justify-content-center'>
-          <Col md='auto' lg='auto' sm='auto' xs='auto'>
+        <Row className="justify-content-center">
+          <Col md="auto" lg="auto" sm="auto" xs="auto">
             <QTable curState={Q_table} found={visited} />
           </Col>
         </Row>
-        <Row className='justify-content-center'>
+        <Row className="justify-content-center">
           <Col
-            md='auto'
-            lg='auto'
-            sm='auto'
-            xs='auto'
+            md="auto"
+            lg="auto"
+            sm="auto"
+            xs="auto"
             style={{ 'margin-bottom': '50px' }}
           >
             <Card style={{ width: '610px' }}>

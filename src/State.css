@@ -1,31 +1,31 @@
 .state-dir-area {
-    background-color: white;
-    float: left;
-    position: relative;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: -10px;
-    width: 168px;
-    height: 168px;
-    border-radius: 0.25rem;
+  background-color: white;
+  float: left;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: -10px;
+  width: 168px;
+  height: 168px;
+  border-radius: 0.25rem;
 }
 
 .state-apple-area {
-    background-color: white;
-    float: right;
-    position: relative;
-    margin-bottom: 30px;
-    margin-left: -10px;    
-    width: 168px;
-    height: 168px;  
-    border-radius: 0.25rem;
+  background-color: white;
+  float: right;
+  position: relative;
+  margin-bottom: 30px;
+  margin-left: -10px;
+  width: 168px;
+  height: 168px;
+  border-radius: 0.25rem;
 }
 
 .state-dot {
-    background-color: black;
-    position: absolute;
-    width: 33.33%;
-    width: calc(100% / 3);
-    height: 33.33%;
-    height: calc(100% / 3);    
+  background-color: black;
+  position: absolute;
+  width: 33.33%;
+  width: calc(100% / 3);
+  height: 33.33%;
+  height: calc(100% / 3);
 }
