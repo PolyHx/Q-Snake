@@ -30,6 +30,8 @@
 
 L'application va être utilisée par PolyAI afin de former des novices au machine learning sans avoir besoin de coder. L'application sera accompagnée de documentation qui expliquera le rôle de chaque hyper-paramètre afin d'offrir une expérience agréable et formative.
 
+Un énorme merci à Siddharth Sriraman pour la création de cette application.
+
 ---
 ## About
 
