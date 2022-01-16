@@ -365,11 +365,6 @@ class Board extends Component {
       steps = 0;
 
       while (!done) {
-        // dist = manhattanDist(
-        //   this.state.food,
-        //   this.state.dots[this.state.dots.length - 1]
-        // );
-
         // step
         action = this.action(0, dir, v1);
 
