@@ -1,3 +1,14 @@
 {
-  "whatIsThis": "What is this?"
+  "what": {
+    "title": "What is this?",
+    "p1": "An interactive web visualiser for a Q-learning RL agent that plays Snake.",
+    "p2": "Set your own hyperparameters and see how the algorithm performs.",
+    "p3": "Uses"
+  },
+  "how": {
+    "title": "How do I use this?",
+    "p1": "Just set the parameters below and hit Train.",
+    "p2": "Vary the speed and click Test to see how the AI plays after training.",
+    "p3": "Explanation of each parameter and the code for this project is available on"
+  }
 }

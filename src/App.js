@@ -39,22 +39,22 @@ function App() {
           >
             <Card.Body>
               <Card.Title>
-                <b>{t('whatIsThis')}</b>
+                <b>{t('what.title')}</b>
               </Card.Title>
               <Card.Text>
-                • An interactive web visualiser for a Q-learning RL agent that
-                plays Snake.
-                <br></br>• Set your own hyperparameters and see how the
-                algorithm performs.
-                <br></br>• Uses{' '}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://en.wikipedia.org/wiki/Q-learning"
-                >
-                  tabular Q-learning
-                </a>
-                .
+                <p>• {t('what.p1')}</p>
+                <p>• {t('what.p2')}</p>
+                <p>
+                  • {t('what.p3')}{' '}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://en.wikipedia.org/wiki/Q-learning"
+                  >
+                    tabular Q-learning
+                  </a>
+                  .
+                </p>
               </Card.Text>
             </Card.Body>
           </Card>
@@ -71,22 +71,22 @@ function App() {
           >
             <Card.Body>
               <Card.Title>
-                <b>How do I use this?</b>
+                <b>{t('how.title')}</b>
               </Card.Title>
               <Card.Text>
-                • Just set the parameters below and hit <b>Train</b>.<br></br>•
-                Vary the speed and click <b>Test</b> to see how the AI plays
-                after training.
-                <br></br>• Explanation of each parameter and the code for this
-                project is available on{' '}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.github.com/sid-sr/q-snake"
-                >
-                  GitHub
-                </a>
-                .
+                <p>• {t('how.p1')}</p>
+                <p>• {t('how.p2')}</p>
+                <p>
+                  • {t('how.p3')}{' '}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.github.com/PolyHx/q-snake"
+                  >
+                    GitHub
+                  </a>
+                  .
+                </p>
               </Card.Text>
             </Card.Body>
           </Card>

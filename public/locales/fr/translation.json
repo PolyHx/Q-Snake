@@ -1,3 +1,14 @@
 {
-  "whatIsThis": "Qu'est-ce que c'est?"
+  "what": {
+    "title": "Qu'est-ce que c'est ?",
+    "p1": "Un visualiseur web interactif pour un agent RL de Q-learning qui joue au Snake",
+    "p2": "Définissez vos propres hyperparamètres et voyez comment l'algorithme se comporte.",
+    "p3": "Fonctionne avec le"
+  },
+  "how": {
+    "title": "Comment l'utiliser?",
+    "p1": "Il suffit de définir les paramètres ci-dessous et d'appuyer sur Train.",
+    "p2": "Variez la vitesse et cliquez sur Test pour voir comment l'IA joue après l'entraînement.",
+    "p3": "L'explication de chaque paramètre et le code de ce projet sont disponibles sur"
+  }
 }
