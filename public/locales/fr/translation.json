@@ -39,5 +39,15 @@
   "state": {
     "tooltip1": " La présence d'un danger immédiat (soit un mur, soit le corps du serpent lui-même) un pas devant dans les quatre directions. Il peut y avoir un danger dans plusieurs directions en même temps, donc 4 directions → 16 combinaisons possibles.",
     "tooltip2": "La position relative de la pomme par rapport au serpent. Cela a 7 valeurs possibles : En bas à gauche, à gauche, en haut à gauche, en haut et ainsi de suite."
+  },
+  "qtable": {
+    "title": "Tableau Q (Q Table)",
+    "p1": "Le tableau Q présenté ci-dessus a des dimensions 8 x 16 (avec 4 entrées dans chaque cellule pour chaque coup, ici nous montrons juste le meilleur coup appris jusqu'à présent)",
+    "p2": "Chaque cellule de la grille est un état, c'est-à-dire une situation dans laquelle le serpent se trouve, comme la pomme est en haut à gauche et il y a un danger à gauche, quel mouvement dois-je faire - en haut, à gauche, en bas ou à droite ?",
+    "p3": "Les entrées vides correspondent à des états inexplorés. Donc, initialement, tous les états sont inexplorés. Au fur et à mesure que l'IA joue le jeu, elle explore les différents états et essaie d'apprendre quels mouvements fonctionnent (en fonction de la récompense pour chaque action effectuée).",
+    "p4": "Les entrées rouges correspondent aux états explorés avec un mauvais mouvement appris par l'IA.",
+    "p5": "Les entrées vertes correspondent aux états explorés avec le bon coup appris par l'IA (c'est-à-dire le coup qu'un humain ferait).",
+    "p6": "Les 8 rangées correspondent à : L'emplacement relatif de la pomme par rapport à la tête (8 directions).",
+    "p7": "Les 16 colonnes correspondent à : Présence d'un danger un pas devant la tête dans 4 directions (tableau de 4 nombres, ce qui donne 16 valeurs possibles)."
   }
 }

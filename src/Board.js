@@ -615,44 +615,30 @@ class Board extends Component {
               <Card.Title
                 style={{ 'margin-top': '20px', 'margin-bottom': '-5px' }}
               >
-                <b>The Q-Table:</b>
+                <b>{t('qtable.title')}:</b>
               </Card.Title>
               <Card.Body>
                 <ul>
                   <li>
-                    The Q-table shown above has dimensions <b>8 x 16</b> (with 4
-                    entries in each cell for each move, here we just show the
-                    best move learnt so far).
+                    <p>{t('qtable.p1')}</p>
                   </li>
                   <li>
-                    Each cell in the grid is a <b>state</b>, ie: one situation
-                    the snake finds itself in, like the apple is in the top left
-                    direction and there is danger to left, which move do I make
-                    - up, left, down, or right?
+                    <p>{t('qtable.p2')}</p>
                   </li>
                   <li>
-                    The blank entries correspond to unexplored states. So
-                    initially, all states are unexplored. As the AI plays the
-                    game, it explores the different states and tries to learn
-                    what moves work (based on the reward for each action made).
+                    <p>{t('qtable.p3')}</p>
                   </li>
                   <li>
-                    The <sp style={{ color: 'red' }}>red</sp> entries correspond
-                    to explored states with wrong move learnt by the AI.
+                    <p>{t('qtable.p4')}</p>
                   </li>
                   <li>
-                    The <sp style={{ color: 'green' }}>green</sp> entries
-                    correspond to explored states with right move learnt by the
-                    AI (ie: what move a human would make).
+                    <p>{t('qtable.p5')}</p>
                   </li>
                   <li>
-                    The 8 rows correspond to: Relative location of the apple to
-                    the head (8 directions)
+                    <p>{t('qtable.p6')}</p>
                   </li>
                   <li>
-                    The 16 columns correspond to: Presence of danger one step
-                    ahead of the head in 4 directions (array of 4 numbers, which
-                    results in 16 possible values).
+                    <p>{t('qtable.p7')}</p>
                   </li>
                 </ul>
               </Card.Body>
