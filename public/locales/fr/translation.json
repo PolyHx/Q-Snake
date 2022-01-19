@@ -10,5 +10,34 @@
     "p1": "Il suffit de définir les paramètres ci-dessous et d'appuyer sur Train.",
     "p2": "Variez la vitesse et cliquez sur Test pour voir comment l'IA joue après l'entraînement.",
     "p3": "L'explication de chaque paramètre et le code de ce projet sont disponibles sur"
+  },
+  "parameters": {
+    "title": "Paramètres",
+    "start": "Epsilon de départ",
+    "discount": "Facteur de réduction",
+    "end": "Epsilon de fin",
+    "episodes": "Episodes",
+    "train": "Train",
+    "stop": "Stop",
+    "test": "Test",
+    "note": "Note : Le bouton Train réinitialise la Q-Table."
+  },
+  "speed": {
+    "title": "Contrôle de la vitesse",
+    "delay": "Délai entre les mouvements:"
+  },
+  "currentRun": {
+    "title": "Essai en cours",
+    "currentEpsilon": "Epsilon courrant",
+    "currentScore": "Score courrant",
+    "maxScore": "Score maximal"
+  },
+  "agentSee": {
+    "title": "Que voit l'agent ?",
+    "p1": " Survolez les cases présentes ci-dessous pour connaître les détails exacts de la représentation de l'état."
+  },
+  "state": {
+    "tooltip1": " La présence d'un danger immédiat (soit un mur, soit le corps du serpent lui-même) un pas devant dans les quatre directions. Il peut y avoir un danger dans plusieurs directions en même temps, donc 4 directions → 16 combinaisons possibles.",
+    "tooltip2": "La position relative de la pomme par rapport au serpent. Cela a 7 valeurs possibles : En bas à gauche, à gauche, en haut à gauche, en haut et ainsi de suite."
   }
 }

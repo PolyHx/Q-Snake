@@ -1,6 +1,7 @@
 import React from 'react';
 import './State.css';
 import { Col, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 
 const dir_map = [
   ['66.66%', '0%'],
@@ -14,6 +15,7 @@ const dir_map = [
 ];
 
 const State = (props) => {
+  const { t } = useTranslation();
   return (
     <>
       <Col>
@@ -21,12 +23,7 @@ const State = (props) => {
           key={0}
           placement={'right'}
           overlay={
-            <Tooltip id={`tooltip-${'right'}`}>
-              The presence of immediate danger (either a wall or the snake body
-              itself) one step ahead in all four directions. There could be
-              danger in multiple directions at the same time, so 4 directions ->
-              16 possible combinations.
-            </Tooltip>
+            <Tooltip id={`tooltip-${'right'}`}>{t('state.tooltip1')}</Tooltip>
           }
         >
           <div className="state-dir-area">
@@ -88,10 +85,7 @@ const State = (props) => {
           key={1}
           placement={'right'}
           overlay={
-            <Tooltip id={`tooltip-${'right'}`}>
-              The relative position of the apple with respect to the snake. This
-              has 7 possible values: Bottom Left, Left, Top Left, Up and so on.
-            </Tooltip>
+            <Tooltip id={`tooltip-${'right'}`}>{t('state.tooltip2')}</Tooltip>
           }
         >
           <div className="state-apple-area">

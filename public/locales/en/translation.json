@@ -10,5 +10,34 @@
     "p1": "Just set the parameters below and hit Train.",
     "p2": "Vary the speed and click Test to see how the AI plays after training.",
     "p3": "Explanation of each parameter and the code for this project is available on"
+  },
+  "parameters": {
+    "title": "Parameters",
+    "start": "Start Epsilon",
+    "discount": "Discount Factor",
+    "end": "End Epsilon",
+    "episodes": "Episodes",
+    "train": "Train",
+    "stops": "Stop",
+    "test": "Test",
+    "note": "Note: Train button resets Q-table"
+  },
+  "speed": {
+    "title": "Speed Control",
+    "delay": "Delay between moves:"
+  },
+  "currentRun": {
+    "title": "Current Run",
+    "currentEpsilon": "Current Epsilon",
+    "currentScore": "Current Score",
+    "maxScore": "Max Score"
+  },
+  "agentSee": {
+    "title": "What does the agent see?",
+    "p1": " Hover over the boxes present below for the exact details of the state representation."
+  },
+  "state": {
+    "tooltip1": "The presence of immediate danger (either a wall or the snake body itself) one step ahead in all four directions. There could be danger in multiple directions at the same time, so 4 directions -> 16 possible combinations.",
+    "tooltip2": "The relative position of the apple with respect to the snake. This has 7 possible values: Bottom Left, Left, Top Left, Up and so on."
   }
 }

@@ -4,6 +4,7 @@ import Food from './Food.js';
 import State from './State.js';
 import QTable from './QTable.js';
 import { Form, Row, Col, Button, Card } from 'react-bootstrap';
+import { withTranslation } from 'react-i18next';
 
 const genCoords = () => {
   return [
@@ -406,6 +407,7 @@ class Board extends Component {
   };
 
   render() {
+    const { t } = this.props;
     return (
       <>
         <Row
@@ -416,13 +418,13 @@ class Board extends Component {
             <Card style={{ 'min-width': '200px' }}>
               <Card.Body>
                 <Card.Title>
-                  <b>Parameters:</b>
+                  <b>{t('parameters.title')}</b>
                 </Card.Title>
                 <Card.Text>
                   <Form onSubmit={this.handleSubmit}>
                     <Form.Row>
                       <Form.Group style={{ 'min-width': '255px' }}>
-                        <Form.Label>Start Epsilon:</Form.Label>
+                        <Form.Label>{t('parameters.start')}:</Form.Label>
                         <Form.Control
                           name="start_epsilon"
                           type="number"
@@ -435,7 +437,7 @@ class Board extends Component {
                     </Form.Row>
                     <Form.Row>
                       <Form.Group style={{ 'min-width': '255px' }}>
-                        <Form.Label>Discount Factor:</Form.Label>
+                        <Form.Label>{t('parameters.discount')}:</Form.Label>
                         <Form.Control
                           name="discount_factor"
                           type="number"
@@ -449,7 +451,7 @@ class Board extends Component {
 
                     <Form.Row>
                       <Form.Group style={{ 'min-width': '255px' }}>
-                        <Form.Label>End Epsilon:</Form.Label>
+                        <Form.Label>{t('parameters.end')}:</Form.Label>
                         <Form.Control
                           name="end_epsilon"
                           type="number"
@@ -462,7 +464,7 @@ class Board extends Component {
                     </Form.Row>
                     <Form.Row>
                       <Form.Group style={{ 'min-width': '255px' }}>
-                        <Form.Label>Episodes:</Form.Label>
+                        <Form.Label>{t('parameters.episodes')}:</Form.Label>
                         <Form.Control
                           name="episodes"
                           type="number"
@@ -478,7 +480,7 @@ class Board extends Component {
                           style={{ display: 'flex', justifyContent: 'center' }}
                         >
                           <Button type="submit" variant="primary">
-                            Train
+                            {t('parameters.train')}
                           </Button>
                         </div>
                       </Form.Group>
@@ -493,7 +495,7 @@ class Board extends Component {
                               this.setState({ ...this.state, agent_state: 2 });
                             }}
                           >
-                            Stop
+                            {t('parameters.stop')}
                           </Button>
                         </div>
                       </Form.Group>
@@ -505,14 +507,14 @@ class Board extends Component {
                             variant="primary"
                             onClick={this.setTestAgentState}
                           >
-                            Test
+                            {t('parameters.test')}
                           </Button>
                         </div>
                       </Form.Group>
                     </Form.Row>
                   </Form>
                   <Row className="justify-content-center">
-                    <small>{'Note: Train button resets Q-table'}</small>
+                    <small>{t('parameters.note')}</small>
                   </Row>
                 </Card.Text>
               </Card.Body>
@@ -523,12 +525,12 @@ class Board extends Component {
             <Card className="bg-light" style={{ 'min-width': '288px' }}>
               <Card.Body>
                 <Card.Title>
-                  <b>Speed Control:</b>
+                  <b>{t('speed.title')}:</b>
                 </Card.Title>
                 <Card.Text>
                   <Form>
                     <Form.Group style={{ 'text-align': 'center' }}>
-                      <Form.Label>Delay between moves: </Form.Label>
+                      <Form.Label>{t('speed.delay')}: </Form.Label>
                       <Form.Control
                         type="range"
                         min="10"
@@ -540,7 +542,7 @@ class Board extends Component {
                   </Form>
                 </Card.Text>
                 <Card.Title>
-                  <b>Current Run:</b>
+                  <b>{t('currentRun.title')}:</b>
                 </Card.Title>
                 <Card.Text>
                   <Row className="justify-content-center">
@@ -551,15 +553,15 @@ class Board extends Component {
                         'font-size': '15px',
                       }}
                     >
-                      Episodes: <br />
-                      Start Epsilon: <br />
-                      End Epsilon: <br />
-                      Current Epsilon: <br />
-                      Discount Factor: <br />
-                      Current Score: <br />
-                      Max Score: <br />
+                      {t('parameters.episodes')}: <br />
+                      {t('parameters.start')}: <br />
+                      {t('parameters.end')}: <br />
+                      {t('currentRun.currentEpsilon')}: <br />
+                      {t('parameters.discount')}: <br />
+                      {t('currentRun.currentScore')}: <br />
+                      {t('currentRun.maxScore')}: <br />
                     </Col>
-                    <Col style={{ 'font-size': '15px', 'max-width': '110px' }}>
+                    <Col style={{ 'font-size': '15px', 'max-width': '28%' }}>
                       {this.state.ep} / {this.state.episodes} <br />
                       {this.state.start_epsilon} <br />
                       {this.state.end_epsilon} <br />
@@ -571,16 +573,12 @@ class Board extends Component {
                   </Row>
                 </Card.Text>
                 <Card.Title>
-                  <b>
-                    What does the <br />
-                    agent see?
-                  </b>
+                  <b>{t('agentSee.title')}</b>
                 </Card.Title>
                 <Card.Text>
                   <Row>
                     <Col style={{ width: '40px', 'margin-left': '20px' }}>
-                      Hover over the boxes present below for the exact details
-                      of the state representation.
+                      {t('agentSee.p1')}
                     </Col>
                   </Row>
                 </Card.Text>
@@ -666,4 +664,4 @@ class Board extends Component {
   }
 }
 
-export default Board;
+export default withTranslation()(Board);
