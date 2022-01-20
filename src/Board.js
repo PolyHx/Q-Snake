@@ -548,7 +548,7 @@ class Board extends Component {
                   <Row className="justify-content-center">
                     <Col
                       style={{
-                        'margin-left': '20px',
+                        'margin-left': '10px',
                         'text-align': 'left',
                         'font-size': '15px',
                       }}
@@ -561,7 +561,7 @@ class Board extends Component {
                       {t('currentRun.currentScore')}: <br />
                       {t('currentRun.maxScore')}: <br />
                     </Col>
-                    <Col style={{ 'font-size': '15px', 'max-width': '28%' }}>
+                    <Col style={{ 'font-size': '15px', 'max-width': '33%' }}>
                       {this.state.ep} / {this.state.episodes} <br />
                       {this.state.start_epsilon} <br />
                       {this.state.end_epsilon} <br />
