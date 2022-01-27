@@ -545,32 +545,92 @@ class Board extends Component {
                   <b>{t('currentRun.title')}:</b>
                 </Card.Title>
                 <Card.Text>
-                  <Row className="justify-content-center">
-                    <Col
-                      style={{
-                        'margin-left': '10px',
-                        'text-align': 'left',
-                        'font-size': '15px',
-                      }}
-                    >
-                      {t('parameters.episodes')}: <br />
-                      {t('parameters.start')}: <br />
-                      {t('parameters.end')}: <br />
-                      {t('currentRun.currentEpsilon')}: <br />
-                      {t('parameters.discount')}: <br />
-                      {t('currentRun.currentScore')}: <br />
-                      {t('currentRun.maxScore')}: <br />
-                    </Col>
-                    <Col style={{ 'font-size': '15px', 'max-width': '33%' }}>
-                      {this.state.ep} / {this.state.episodes} <br />
-                      {this.state.start_epsilon} <br />
-                      {this.state.end_epsilon} <br />
-                      {parseFloat(this.state.epsilon).toFixed(3)} <br />
-                      {this.state.discount_factor} <br />
-                      {this.state.score} <br />
-                      {this.state.max_score} <br />
-                    </Col>
-                  </Row>
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      marginLeft: '10px',
+                      marginRight: '10px',
+                    }}
+                  >
+                    <p>{t('parameters.episodes')}: </p>
+                    <p>
+                      {this.state.ep} / {this.state.episodes}
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      marginLeft: '10px',
+                      marginRight: '10px',
+                    }}
+                  >
+                    <p>{t('parameters.start')}: </p>
+                    <p>{this.state.start_epsilon}</p>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      marginLeft: '10px',
+                      marginRight: '10px',
+                    }}
+                  >
+                    <p>{t('parameters.end')}: </p>
+                    <p>{this.state.end_epsilon}</p>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      marginLeft: '10px',
+                      marginRight: '10px',
+                    }}
+                  >
+                    <p>{t('currentRun.currentEpsilon')}: </p>
+                    <p>{parseFloat(this.state.epsilon).toFixed(3)}</p>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      marginLeft: '10px',
+                      marginRight: '10px',
+                    }}
+                  >
+                    <p>{t('parameters.discount')}: </p>
+                    <p>{this.state.discount_factor}</p>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      marginLeft: '10px',
+                      marginRight: '10px',
+                    }}
+                  >
+                    <p>{t('currentRun.currentScore')}: </p>
+                    <p>{this.state.score}</p>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      marginLeft: '10px',
+                      marginRight: '10px',
+                    }}
+                  >
+                    <p>{t('currentRun.maxScore')}: </p>
+                    <p>{this.state.max_score}</p>
+                  </div>
                 </Card.Text>
                 <Card.Title>
                   <b>{t('agentSee.title')}</b>
